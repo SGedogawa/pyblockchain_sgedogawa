@@ -54,6 +54,13 @@ class BlockChain(object):
         ):
             self.transaction_pool.append(transaction)
             return True
+
+        if self.calculate_total_amount(sender_address) < float(value):
+            logger.error({
+                'action': 'add_transaction',
+                'error': 'no_value',
+            })
+            return False
         return False
 
     def verify_transaction_signature(self, sender_public_key, signature, transaction):
