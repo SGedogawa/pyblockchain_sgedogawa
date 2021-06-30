@@ -1,5 +1,7 @@
 from mylib import wallet
 
+print("hello world!")
+
 if __name__ == '__main__':
     # my_blockchain_address = 'my_blockchain_address'
     # block_chain = blockchain.BlockChain(my_blockchain_address)
